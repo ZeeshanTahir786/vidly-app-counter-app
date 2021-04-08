@@ -31,7 +31,7 @@ jobs:
         
       # Steps to install Surge
       - name: Installing Surge
-        run: npm i -g surge
+        run: npm i --global surge
       
       # Deployment to Surge
       - name: Execute Deployment to Surge
