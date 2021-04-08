@@ -35,4 +35,4 @@ jobs:
       
       # Deployment to Surge
       - name: Execute Deployment to Surge
-        run: surge ./build bau_rami999.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build http://klko.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
