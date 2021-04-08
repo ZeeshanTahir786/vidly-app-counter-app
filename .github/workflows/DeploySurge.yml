@@ -35,4 +35,4 @@ jobs:
       
       # Deployment to Surge
       - name: Exrcute Deployment to Surge
-        run: surge ./ hafiz_project1.surge.sh --token {{ secrets.SURGE_TOKEN }}
+        run: surge ./ hafiz_project1.surge.sh --token ${{ secrets.SURGE_TOKEN }}
