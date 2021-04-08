@@ -31,8 +31,8 @@ jobs:
         
       # Steps to install Surge
       - name: Installing Surge
-        run: npm i --global surge
+        run: npm install -g surge
       
       # Deployment to Surge
       - name: Execute Deployment to Surge
-        run: surge ./ bau_rami999.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build bau_rami999.surge.sh --token ${{ secrets.SURGE_TOKEN }}
