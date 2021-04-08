@@ -1,8 +1,8 @@
 import "./App.css";
 import React, { Component } from "react";
 import Movies from "./vidlyCmponents/movies";
-import Counters from "./components/counters";
-import NavBar from "./components/navBar";
+// import Counters from "./components/counters";
+// import NavBar from "./components/navBar";
 
 class App extends Component {
   state = {
