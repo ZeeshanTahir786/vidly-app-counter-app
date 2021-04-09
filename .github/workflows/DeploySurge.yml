@@ -38,7 +38,7 @@ jobs:
           cmd: install
 
       - name: Creating Build
-        run: yarn build
+        run: sudo yarn build
 
       # Steps to install Surge
       - name: installing Surge
