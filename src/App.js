@@ -40,7 +40,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div>
+      <React.Fragment>
         {/* <NavBar
           totalCounter={this.state.counters.filter((c) => c.value > 0).length}
         />
@@ -53,9 +53,8 @@ class App extends Component {
             onDecrement={this.handleDecremnt}
           />
         </main> */}
-        {/* <Movies /> */}
-        <h1>Hello World</h1>
-      </div>
+        <Movies />
+      </React.Fragment>
     );
   }
 }
