@@ -42,7 +42,7 @@ jobs:
 
       # Steps to install Surge
       - name: installing Surge
-        run: npm install -g surge
+        run: sudo npm install -g surge
 
       # Deployment to Surge
       - name: Execute Deployment to Surge
