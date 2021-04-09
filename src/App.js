@@ -53,7 +53,8 @@ class App extends Component {
             onDecrement={this.handleDecremnt}
           />
         </main> */}
-        <Movies />
+        {/* <Movies /> */}
+        <h1>Hello World</h1>
       </React.Fragment>
     );
   }
