@@ -1,6 +1,13 @@
-import "./App.css";
 import React, { Component } from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Movies from "./vidlyCmponents/movies";
+import Rentals from "./vidlyCmponents/rentals";
+import NotFound from "./vidlyCmponents/notFound";
+import Customers from "./vidlyCmponents/customers";
+import NavBar from "./vidlyCmponents/navBar";
+import MovieForm from "./vidlyCmponents/movieForm";
+import LoginForm from "./vidlyCmponents/loginForm";
+import "./App.css";
 // import Counters from "./components/counters";
 // import NavBar from "./components/navBar";
 
@@ -41,6 +48,21 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+      <NavBar />
+      <main className="container">
+          <Switch>
+          <Route path="/login" component={LoginForm}></Route>
+          <Route path="/movies/:id" component={MovieForm}></Route>
+          <Route path="/movies" component={Movies}></Route>
+          <Route path="/customers" component={Customers}></Route>
+          <Route path="/rentals" component={Rentals}></Route>
+          <Route path="/not-found" component={NotFound}></Route>
+          <Redirect from="/" exact to="/movies" />
+          <Redirect to="/not-found" />
+        </Switch>
+      </main>
+      </React.Fragment>
+      );
         {/* <NavBar
           totalCounter={this.state.counters.filter((c) => c.value > 0).length}
         />
@@ -53,9 +75,7 @@ class App extends Component {
             onDecrement={this.handleDecremnt}
           />
         </main> */}
-        <Movies />
-      </React.Fragment>
-    );
+    
   }
 }
 
